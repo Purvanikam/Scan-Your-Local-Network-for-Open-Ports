@@ -1,26 +1,58 @@
-# Scan Your Local Network for Open Ports
+#Local Network Open Ports Scan Report
+Date of Scan: [04/08/2025]
 
-## Objective
-Learn to discover open ports on devices in your local network to understand network exposure.
 
-## Tools Needed
-- Nmap (free)
-- Wireshark (optional)
-- Mobile alternatives: Fing (Android/iOS), Network Analyzer (iOS)
+Tools Used: Nmap (planned), Wireshark (optional)
 
-## Steps
-1. Install Nmap from the official website.
-2. Find your local IP range (e.g., 192.168.1.0/24).
-3. Run: `nmap -sS 192.168.1.0/24` to perform a TCP SYN scan.
-4. Note down IP addresses and open ports found.
-5. (Optional) Analyze packet capture with Wireshark.
-6. Research common services running on those ports.
-7. Identify potential security risks from open ports.
-8. Save scan results as a text or HTML file.
 
-## Outcome
-- Basic network reconnaissance skills
-- Understanding network service exposure
+Objective: Discover open ports on devices in the local network to understand network exposure.
+1. Scan Preparation
+Nmap Installation:
 
-## Disclaimer
-**Only scan networks you own or have permission to scan. Unauthorized scanning may be illegal.**
+
+ Download from nmap.org and follow installation instructions for your OS.
+
+Find Local IP Range:
+
+
+ Use ipconfig (Windows) or ifconfig/ip a (Linux/macOS) to determine the subnet, e.g., 192.168.1.0/24.
+
+2. Scan Execution
+Command Used: nmap -sS 192.168.1.0/24 
+Performs a TCP SYN scan on all devices in the subnet.
+Optional Packet Capture:
+
+
+ Use Wireshark to capture and analyze network traffic during the scan.
+
+3. Example Scan Results
+| IP Address | Open Ports | Common Services |
+|----------------|------------------|--------------------|
+| 192.168.1.10 | 22, 80 | SSH, HTTP |
+| 192.168.1.15 | 445 | SMB |
+| 192.168.1.20 | 80, 443 | HTTP, HTTPS |
+| ... | ... | ... |
+
+4. Service Analysis
+| Port | Service | Description | Security Risk |
+|------|---------|-------------------------------|-------------------------------|
+| 22 | SSH | Secure remote login | Brute-force attacks possible |
+| 80 | HTTP | Web server | Vulnerable to exploits |
+| 443 | HTTPS | Secure web server | SSL/TLS weaknesses possible |
+| 445 | SMB | Windows file sharing | Ransomware, unauthorized access|
+
+5. Security Risks Identified
+Unnecessary Open Ports: Devices with open ports/services not required for daily operation increase attack surface.
+Default Credentials: Services like SSH or SMB may be vulnerable if default or weak credentials are used.
+Old Firmware/Software: Known vulnerabilities in outdated systems may be exploited if ports are open.
+
+6. Recommendations
+Close Unused Services/Ports: Restrict unnecessary network exposure.
+Update Devices: Regularly update firmware and software.
+Monitor Network Traffic: Use Wireshark or similar tools for ongoing monitoring.
+Strong Authentication: Use strong passwords and, where possible, key-based authentication.
+
+7. References
+Nmap Documentation
+Wireshark Documentation
+IANA Port Registry
