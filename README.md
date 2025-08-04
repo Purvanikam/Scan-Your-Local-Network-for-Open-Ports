@@ -26,21 +26,21 @@ Optional Packet Capture:
 
  Use Wireshark to capture and analyze network traffic during the scan.
 
-3. Example Scan Results
-| IP Address | Open Ports | Common Services |
+3. Scan Results
+| IP Address     | Open Ports       | Common Services    |
 |----------------|------------------|--------------------|
-| 192.168.1.10 | 22, 80 | SSH, HTTP |
-| 192.168.1.15 | 445 | SMB |
-| 192.168.1.20 | 80, 443 | HTTP, HTTPS |
-| ... | ... | ... |
+| 192.168.1.10   | 22, 80           | SSH, HTTP          |
+| 192.168.1.15   | 445              | SMB                |
+| 192.168.1.20   | 80, 443          | HTTP, HTTPS        |
+| ...            | ...              | ...                |
 
 4. Service Analysis
-| Port | Service | Description | Security Risk |
+| Port | Service | Description                   | Security Risk                 |
 |------|---------|-------------------------------|-------------------------------|
-| 22 | SSH | Secure remote login | Brute-force attacks possible |
-| 80 | HTTP | Web server | Vulnerable to exploits |
-| 443 | HTTPS | Secure web server | SSL/TLS weaknesses possible |
-| 445 | SMB | Windows file sharing | Ransomware, unauthorized access|
+| 22   | SSH     | Secure remote login           | Brute-force attacks possible  |
+| 80   | HTTP    | Web server                    | Vulnerable to exploits        |
+| 443  | HTTPS   | Secure web server             | SSL/TLS weaknesses possible   |
+| 445  | SMB     | Windows file sharing          | Ransomware,unauthorized access|
 
 5. Security Risks Identified
 Unnecessary Open Ports: Devices with open ports/services not required for daily operation increase attack surface.
