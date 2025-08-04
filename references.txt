@@ -1,0 +1,7 @@
+Nmap Documentation: https://nmap.org/docs.html
+Nmap Port Specification: https://nmap.org/book/man-port-specification.html
+Wireshark Documentation: https://www.wireshark.org/docs/
+IANA Service Name and Port Number Registry: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+Google Public DNS (8.8.8.8): https://developers.google.com/speed/public-dns
+Cloudflare Public DNS (1.1.1.1): https://www.cloudflare.com/learning/dns/dns-overview/
+Network Security Basics (OWASP): https://owasp.org/www-project-top-ten/
